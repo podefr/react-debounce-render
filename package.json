@@ -1,0 +1,17 @@
+{
+  "name": "react-debounce-render",
+  "version": "1.0.0",
+  "description": "A debounce HOC that will debounce the rendering of your React component's render methods",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "react",
+    "render",
+    "debounce",
+    "lodash"
+  ],
+  "author": "Olivier Scherrer",
+  "license": "MIT"
+}
