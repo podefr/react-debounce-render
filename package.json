@@ -1,10 +1,10 @@
 {
   "name": "react-debounce-render",
-  "version": "0.0.0alpha",
-  "description": "A React higher order component that will debounce the rendering of your React component's render methods",
-  "main": "index.js",
+  "version": "0.0.2-wip",
+  "description": "A React higher order component that will debounce the rendering of your React components",
+  "main": "lib/index.js",
   "scripts": {
-    "test": "test"
+    "prepublish": "webpack"
   },
   "keywords": [
     "react",
