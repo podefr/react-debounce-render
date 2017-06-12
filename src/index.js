@@ -6,9 +6,8 @@ export default function debounceRender(Component, ...debounceArgs) {
         constructor(props) {
             super(props);
 
-            this.state = {
-                props
-            };
+            this.state = props;
+            this.shouldRender = false;
         }
 
         componentWillReceiveProps(props) {
@@ -20,11 +19,9 @@ export default function debounceRender(Component, ...debounceArgs) {
             return this.shouldRender;
         }
 
-        updateState = debounce((props) => {
+        updateState = debounce(props => {
             this.shouldRender = true;
-            this.setState({
-                props
-            });
+            this.setState(props);
         }, ...debounceArgs);
 
         shouldComponentUpdate() {
@@ -32,7 +29,7 @@ export default function debounceRender(Component, ...debounceArgs) {
         }
 
         render() {
-            return <Component { ...this.state.props } />;
+            return <Component { ...this.state } />;
         }
     }
 }
