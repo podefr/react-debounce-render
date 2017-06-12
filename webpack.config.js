@@ -5,22 +5,17 @@ function getAbsolutePath(filename) {
     return path.resolve(__dirname, filename);
 }
 
-const SRC_DIR = getAbsolutePath('src/index.js');
-const LIB_DIR = getAbsolutePath('lib/');
-
-var config = {
-    entry: SRC_DIR,
+module.exports = {
+    entry: getAbsolutePath('src/index.js'),
     output: {
-        path: LIB_DIR,
-        filename: 'index.js'
+        path: getAbsolutePath('lib/'),
+        filename: 'index.js',
+        libraryTarget: 'commonjs'
     },
     module: {
         loaders: [{
             test: /\.js/,
-            include: SRC_DIR,
             loader: 'babel-loader'
         }],
     }
 };
-
-module.exports = config;
