@@ -1,6 +1,6 @@
 {
   "name": "react-debounce-render",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A React higher order component that will debounce the rendering of your React components",
   "main": "lib/index.js",
   "scripts": {
@@ -10,6 +10,7 @@
     "react",
     "render",
     "debounce",
+    "lodash",
     "performance"
   ],
   "author": "Olivier Scherrer",
@@ -22,7 +23,9 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "lodash.debounce": "^4.0.8",
-    "react": "^15.5.4",
     "webpack": "^2.6.1"
+  },
+  "peerDependencies": {
+    "react": "^15.0.0",
   }
 }
