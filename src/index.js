@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import debounce from 'lodash.debounce';
 
-export default function debounceRender(Component, ...debounceArgs) {
+export default function debounceRender(ComponentToDebounce, ...debounceArgs) {
     return class DebouncedContainer extends Component {
         constructor(props) {
             super(props);
@@ -29,7 +29,7 @@ export default function debounceRender(Component, ...debounceArgs) {
         }
 
         render() {
-            return <Component { ...this.state } />;
+            return <ComponentToDebounce { ...this.state } />;
         }
     }
 }
