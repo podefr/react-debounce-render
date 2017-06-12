@@ -1,6 +1,6 @@
 {
   "name": "react-debounce-render",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A React higher order component that will debounce the rendering of your React components",
   "main": "lib/index.js",
   "scripts": {
