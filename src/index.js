@@ -15,10 +15,6 @@ export default function debounceRender(ComponentToDebounce, ...debounceArgs) {
             this.updateState(props);
         }
 
-        shouldComponentRender() {
-            return this.shouldRender;
-        }
-
         updateState = debounce(props => {
             this.shouldRender = true;
             this.setState(props);
