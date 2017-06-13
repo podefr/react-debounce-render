@@ -10,7 +10,7 @@ module.exports = {
     output: {
         path: getAbsolutePath('lib/'),
         filename: 'index.js',
-        libraryTarget: 'commonjs'
+        libraryTarget: 'umd'
     },
     module: {
         loaders: [{

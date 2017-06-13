@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import debounce from 'lodash.debounce';
 
-export default function debounceRender(ComponentToDebounce, ...debounceArgs) {
+module.exports = function debounceRender(ComponentToDebounce, ...debounceArgs) {
     return class DebouncedContainer extends Component {
         constructor(props) {
             super(props);
@@ -28,4 +28,4 @@ export default function debounceRender(ComponentToDebounce, ...debounceArgs) {
             return <ComponentToDebounce { ...this.state } />;
         }
     }
-}
+};

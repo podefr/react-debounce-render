@@ -1,6 +1,7 @@
 {
   "name": "react-debounce-render",
-  "version": "0.0.8",
+  "version": "0.0.9",
+  "homepage": "https://github.com/podefr/react-debounce-render",
   "description": "A React higher order component that will debounce the rendering of your React components",
   "main": "lib/index.js",
   "scripts": {

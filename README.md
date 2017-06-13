@@ -18,12 +18,10 @@ is lodash's debounce, you may also pass in a few options such as the number of m
 
 ### Default usage:
 
-Note, the necessary `.default` will be removed in a future release
-
 ```js
 import debounceRender from 'react-debounce-render';
 
-const debouncedMyReactComponent = debounceRender.default(MyReactComponent);
+const debouncedMyReactComponent = debounceRender(MyReactComponent);
 
 // do whatever you want with the debounced component such as connecting to a redux store:
 connect(state => {
@@ -39,6 +37,6 @@ react-debounce-render
 ```js
 import debounceRender from 'react-debounce-render';
 
-const debouncedMyReactComponent = debounceRender.default(MyReactComponent, 100, { leading: false });
+const debouncedMyReactComponent = debounceRender(MyReactComponent, 100, { leading: false });
 ```
 
