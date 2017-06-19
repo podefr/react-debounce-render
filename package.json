@@ -14,7 +14,7 @@
     "lodash",
     "performance"
   ],
-  "author": "Olivier Scherrer",
+  "author": "Olivier Scherrer <pode.fr@gmail.com>",
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
