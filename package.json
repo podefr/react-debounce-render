@@ -1,6 +1,6 @@
 {
   "name": "react-debounce-render",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "homepage": "https://github.com/podefr/react-debounce-render",
   "description": "A React higher order component that will debounce the rendering of your React components",
   "main": "lib/index.js",
@@ -25,5 +25,9 @@
     "babel-preset-stage-0": "^6.24.1",
     "lodash.debounce": "^4.0.8",
     "webpack": "^2.6.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:podefr/react-debounce-render.git"
   }
 }
