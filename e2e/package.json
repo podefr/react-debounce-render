@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "react": "^15.6.1",
+    "react-debounce-render": "0.0.10",
     "react-dom": "^15.6.1"
   },
   "devDependencies": {
