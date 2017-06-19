@@ -22,7 +22,7 @@ class App extends Component {
     }
 
     simulateFastDataStream() {
-        new Array(100)
+        new Array(10)
             .fill(1)
             .forEach((value, index) => {
                 setTimeout(() => {
