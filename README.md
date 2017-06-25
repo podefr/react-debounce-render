@@ -1,12 +1,13 @@
 # react-debounce-render
 
-react-debounce-render is a Higher Order Component that wraps your react components and debounces their renderering.
-This method can be used to prevent extra renders when a react component rapidly receives new props by delaying the triggering of the render until updates become less frequent.
+`react-debounce-render` is a Higher Order Component that wraps your react components and debounces their rendering.
+
+This method can be used to prevent extra renders when a react component rapidly receives new props by delaying the triggering of the render until updates become less frequent. Doing so will improve the overall rendering time of the application, thus improve the user experience.
 It uses [lodash debounce](https://lodash.com/docs/#debounce) under the hood.
 
-Rationale:
+### Rationale:
 
-Sometimes it's difficult, impractical or impossible to batch props updates before they're passed down to a react component, resuling in a react component being rendered too often while only the last
+Sometimes it's difficult, impractical or impossible to batch props updates before they're passed down to a react component, resulting in a react component being rendered too often while only the last
 props update might have been useful and should have triggered a rendering of the component. In these cases, debouncing the rendering of a react component may be the only solution to improve performance.
 
 `react-debounce-render` is a react component that will wrap any of your react components, persist the last props update that was received while discarding the previous ones,
@@ -31,7 +32,7 @@ connect(state => {
 
 ### With options:
 
-react-debounce-render
+See [lodash debounce](https://lodash.com/docs/#debounce) for all options. Debounce render takes its parameters similarily to lodash debounce:
 
 ```js
 import debounceRender from 'react-debounce-render';
