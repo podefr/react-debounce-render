@@ -1,19 +1,23 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+const React = require('react');
+const App = require('./App').default;
+const enzyme = require('enzyme');
 
 describe('Given App is rendered', () => {
+    let wrapper;
+
     beforeEach(() => {
-        const div = document.createElement('div');
-        ReactDOM.render(<App />, div);
+        jest.useFakeTimers();
+
+        wrapper = enzyme.mount(<App />);
     });
 
     describe('When 10 updates were received, 10 ms apart', () => {
-        it('Then DisplayCount is only rendered once', (done) => {
-            setTimeout(() => {
-                expect(document.querySelector("b.render-count").innerText).toBe(2);
-                done();
-            }, 2000);
+        beforeEach(() => {
+            jest.runAllTimers();
+        });
+
+        it('Then DisplayCount is only rendered once after the initial rendering', () => {
+            expect(+wrapper.find(".render-count").text()).toBe(2);
         });
     });
 });
