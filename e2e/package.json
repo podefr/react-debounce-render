@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "react": "^15.6.1",
-    "react-debounce-render": "0.0.10"
+    "react-debounce-render": "2.0.0"
   },
   "devDependencies": {
     "enzyme": "^2.8.2",

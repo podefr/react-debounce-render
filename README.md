@@ -40,3 +40,14 @@ import debounceRender from 'react-debounce-render';
 const debouncedMyReactComponent = debounceRender(MyReactComponent, 100, { leading: false });
 ```
 
+# Changelog
+
+## 2.0.0 - JULY 31 2017
+
+* Module isn't built as standalone before being published to npm, resulting in a cleaner and lighter package. Also removes non lib related files from the package. See [PR #1](https://github.com/podefr/react-debounce-render/pull/1). Thanks [@wbazant](https://github.com/wbazant) for the contribution.
+
+## 1.0.0 - JUNE 25 2017
+
+* debounces a React component's render method()
+* includes e2e tests and documentation
+
