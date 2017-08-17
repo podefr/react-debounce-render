@@ -42,11 +42,16 @@ const debouncedMyReactComponent = debounceRender(MyReactComponent, 100, { leadin
 
 # Changelog
 
-## 2.0.0 - JULY 31 2017
+### 3.0.0 - AUGUST 16 2017
+
+* ```import debounceRender from 'react-debounce-render'``` should now consistently work. See [Issue #2](https://github.com/podefr/react-debounce-render/issues/2). Thanks [@CameronAckermanSEL](https://github.com/CameronAckermanSEL) for raising the issue.
+As a result, using a destructuring assignment in the import statement (```import { debounceRender } from 'react-debounce-render''```) shouldn't accidentally work anymore which is a potential breaking change.
+
+### 2.0.0 - JULY 31 2017
 
 * Module isn't built as standalone before being published to npm, resulting in a cleaner and lighter package. Also removes non lib related files from the package. See [PR #1](https://github.com/podefr/react-debounce-render/pull/1). Thanks [@wbazant](https://github.com/wbazant) for the contribution.
 
-## 1.0.0 - JUNE 25 2017
+### 1.0.0 - JUNE 25 2017
 
 * debounces a React component's render method()
 * includes e2e tests and documentation

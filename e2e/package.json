@@ -3,8 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^15.6.1",
-    "react-debounce-render": "2.0.0"
+    "react": "^15.6.1"
   },
   "devDependencies": {
     "enzyme": "^2.8.2",
