@@ -42,6 +42,10 @@ const debouncedMyReactComponent = debounceRender(MyReactComponent, 100, { leadin
 
 # Changelog
 
+### 4.0.0 - NOVEMBER 20 2017
+
+* Move react to the ```peerDependencies``` in package.json and accept major versions greater than 15. Resolves [Issue #4](https://github.com/podefr/react-debounce-render/issues/4). Thanks [@TheSharpieOne](https://github.com/TheSharpieOne) for raising the issue.
+
 ### 3.0.0 - AUGUST 16 2017
 
 * ```import debounceRender from 'react-debounce-render'``` should now consistently work. See [Issue #2](https://github.com/podefr/react-debounce-render/issues/2). Thanks [@CameronAckermanSEL](https://github.com/CameronAckermanSEL) for raising the issue.
