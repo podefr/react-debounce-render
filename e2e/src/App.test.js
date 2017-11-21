@@ -1,6 +1,10 @@
-const React = require('react');
-const App = require('./App').default;
-const enzyme = require('enzyme');
+import React from 'react';
+import enzyme from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+
+import App from './App';
+
+enzyme.configure({ adapter: new Adapter() });
 
 describe('Given App is rendered', () => {
     let wrapper;
