@@ -24,6 +24,24 @@ describe('Given App is rendered', () => {
             expect(+wrapper.find(".render-count").text()).toBe(2);
         });
     });
+
+    describe('When the component is unmounted', () => {
+        it('does not log an unmounted component error', async () => {
+            const errorSpy = jest.spyOn(global.console, 'error')
+            await new Promise((resolve) => {
+                // unmount after debounced execution is queued, but before it gets executed.
+                setTimeout(() => {
+                    wrapper.unmount();
+                }, 95);
+
+                setTimeout(() => {
+                    resolve()
+                }, 110);
+                jest.runAllTimers();
+            });
+            expect(errorSpy).not.toHaveBeenCalled()
+        })
+    })
 });
 
 
