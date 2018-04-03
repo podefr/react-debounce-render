@@ -5,6 +5,7 @@ export default function debounceRender(ComponentToDebounce, ...debounceArgs) {
     return class DebouncedContainer extends Component {
         constructor(props) {
             super(props);
+
             this.state = props;
             this.shouldRender = false;
         }
