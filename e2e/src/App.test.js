@@ -25,23 +25,17 @@ describe('Given App is rendered', () => {
         });
     });
 
-    describe('When the component is unmounted', () => {
-        it('does not log an unmounted component error', async () => {
-            const errorSpy = jest.spyOn(global.console, 'error')
-            await new Promise((resolve) => {
-                // unmount after debounced execution is queued, but before it gets executed.
-                setTimeout(() => {
-                    wrapper.unmount();
-                }, 95);
+    describe('When unmounts before a scheduled call to setState', () => {
+        beforeEach(() => {
+            jest.spyOn(global.console, 'error');
+            setTimeout(() => wrapper.unmount(), 90);
+            jest.runAllTimers();
+        });
 
-                setTimeout(() => {
-                    resolve()
-                }, 110);
-                jest.runAllTimers();
-            });
-            expect(errorSpy).not.toHaveBeenCalled()
-        })
-    })
+        it(`Doesn't log an error`, () => {
+            expect(global.console.error).not.toHaveBeenCalled();
+        });
+    });
 });
 
 
