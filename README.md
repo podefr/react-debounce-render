@@ -42,6 +42,11 @@ const debouncedMyReactComponent = debounceRender(MyReactComponent, 100, { leadin
 
 # Changelog
 
+### 4.0.1 - APRIL 3 2018
+
+* Ensure that debounce is properly canceled when the component is unmounted which removes the "Warning: Can only update a mounted or mounting component." warning.
+Resolves [Issue #5](https://github.com/podefr/react-debounce-render/issues/5). Thanks [@mjhm](https://github.com/mjhm) for the fix.
+
 ### 4.0.0 - NOVEMBER 20 2017
 
 * Move react to the ```peerDependencies``` in package.json and accept major versions greater than 15. Resolves [Issue #4](https://github.com/podefr/react-debounce-render/issues/4). Thanks [@TheSharpieOne](https://github.com/TheSharpieOne) for raising the issue.
