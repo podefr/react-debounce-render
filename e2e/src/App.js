@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import debounceRender from '../../src/index';
+import debounceRender from 'react-debounce-render';
 
 import  DisplayCount from './DisplayCount';
 
