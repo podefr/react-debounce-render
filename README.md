@@ -44,7 +44,7 @@ const debouncedMyReactComponent = debounceRender(MyReactComponent, 100, { leadin
 
 ### 4.0.2 - JULY 6 2018
 
-* Use lodash.debounce instead of lodash to reduce built package size. Thanks [@faizrr][https://github.com/faizrr] for raising the issue!
+* Use lodash.debounce instead of lodash to reduce built package size. Thanks [@faizrr](https://github.com/faizrr) for raising the issue!
 
 ### 4.0.1 - APRIL 3 2018
 
