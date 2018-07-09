@@ -42,6 +42,10 @@ const debouncedMyReactComponent = debounceRender(MyReactComponent, 100, { leadin
 
 # Changelog
 
+### 4.0.2 - JULY 6 2018
+
+* Use lodash.debounce instead of lodash to reduce built package size. Thanks [@faizrr](https://github.com/faizrr) for raising the issue!
+
 ### 4.0.1 - APRIL 3 2018
 
 * Ensure that debounce is properly canceled when the component is unmounted which removes the "Warning: Can only update a mounted or mounting component." warning.
