@@ -1,6 +1,6 @@
 {
   "name": "react-debounce-render",
-  "version": "4.0.2",
+  "version": "4.0.3",
   "homepage": "https://github.com/podefr/react-debounce-render",
   "description": "A React higher order component that will debounce the rendering of your React components",
   "main": "lib/index.js",
@@ -18,14 +18,15 @@
   "author": "Olivier Scherrer <pode.fr@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "lodash": "^4.17.10",
     "lodash.debounce": "^4.0.8"
   },
   "peerDependencies": {
     "react": ">= 15"
   },
   "devDependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-core": "^6.25.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
     "babel-loader": "^7.0.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
