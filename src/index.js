@@ -3,33 +3,19 @@ import debounce from 'lodash/debounce';
 
 export default function debounceRender(ComponentToDebounce, ...debounceArgs) {
     return class DebouncedContainer extends Component {
-        constructor(props) {
-            super(props);
+        updateDebounced = debounce(this.forceUpdate, ...debounceArgs);
 
-            this.state = props;
-            this.shouldRender = false;
-        }
-
-        componentWillReceiveProps(props) {
-            this.shouldRender = false;
-            this.updateState(props);
+        shouldComponentUpdate() {
+            this.updateDebounced();
+            return false;
         }
 
         componentWillUnmount() {
-            this.updateState.cancel();
+            this.updateDebounced.cancel();
         }
-
-        updateState = debounce(props => {
-            this.shouldRender = true;
-            this.setState(props);
-        }, ...debounceArgs);
-
-        shouldComponentUpdate() {
-            return this.shouldRender;
-        }
-
+    
         render() {
-            return <ComponentToDebounce { ...this.state } />;
+            return <ComponentToDebounce {...this.props} />;
         }
     }
 };
