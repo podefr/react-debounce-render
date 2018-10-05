@@ -42,6 +42,13 @@ const debouncedMyReactComponent = debounceRender(MyReactComponent, 100, { leadin
 
 # Changelog
 
+### 5.0.0 - OCT 04 2018
+
+There is no breaking change in this version despite the major version change, this is only to highlight the fact that most of the internal implementation has changed since PR #12.
+
+* Removes unused `lodash` dependency since we're using `lodash/debounce`. Thanks [@yched](https://github.com/yched) for raising the issue!
+* Using [@yched](https://github.com/yched) cleaner implementation which doesn't use the deprecated lifecycle methods nor trigger any warning. See Issue [#11](https://github.com/podefr/react-debounce-render/issues/11).
+
 ### 4.0.3 - JULY 19 2018
 
 * Revert 4.0.2 change and use latest lodash version again, though importing `lodash/debounce` directly. Thanks [@faizrr](https://github.com/faizrr) for raising the issue!

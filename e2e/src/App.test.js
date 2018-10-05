@@ -23,6 +23,10 @@ describe('Given App is rendered', () => {
         it('Then DisplayCount is only rendered once after the initial rendering', () => {
             expect(+wrapper.find(".render-count").text()).toBe(2);
         });
+        
+        it('Then receives the latest props', () => {
+           expect(+wrapper.find('.data-length').text()).toBe(10);
+        });
     });
 
     describe('When unmounts before a scheduled call to setState', () => {

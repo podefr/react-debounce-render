@@ -13,7 +13,7 @@ export default function debounceRender(ComponentToDebounce, ...debounceArgs) {
         componentWillUnmount() {
             this.updateDebounced.cancel();
         }
-    
+
         render() {
             return <ComponentToDebounce {...this.props} />;
         }
