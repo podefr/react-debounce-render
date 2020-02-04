@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import debounce from 'lodash/debounce';
+import hoistNonReactStatics from 'hoist-non-react-statics';
 
-export default function debounceRender(ComponentToDebounce, ...debounceArgs) {
-    return class DebouncedContainer extends Component {
+function debounceRender(ComponentToDebounce, ...debounceArgs) {
+    class DebouncedContainer extends Component {
         updateDebounced = debounce(this.forceUpdate, ...debounceArgs);
 
         shouldComponentUpdate() {
@@ -18,4 +19,7 @@ export default function debounceRender(ComponentToDebounce, ...debounceArgs) {
             return <ComponentToDebounce {...this.props} />;
         }
     }
+    return hoistNonReactStatics(DebouncedContainer, ComponentToDebounce);
 };
+
+export default debounceRender;

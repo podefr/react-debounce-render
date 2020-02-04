@@ -18,6 +18,7 @@
   "author": "Olivier Scherrer <pode.fr@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "hoist-non-react-statics": "^3.3.2",
     "lodash.debounce": "^4.0.8"
   },
   "peerDependencies": {
