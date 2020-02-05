@@ -3,7 +3,8 @@
 `react-debounce-render` is a Higher Order Component that wraps your react components and debounces their rendering.
 
 This method can be used to prevent extra renders when a react component rapidly receives new props by delaying the triggering of the render until updates become less frequent. Doing so will improve the overall rendering time of the application, thus improve the user experience.
-It uses [lodash debounce](https://lodash.com/docs/#debounce) under the hood.
+
+It uses [lodash debounce](https://lodash.com/docs/#debounce) under the hood, which means that it can be configured just like lodash debounce.
 
 ### Rationale:
 
@@ -34,13 +35,29 @@ connect(state => {
 
 See [lodash debounce](https://lodash.com/docs/#debounce) for all options. Debounce render takes its parameters similarily to lodash debounce:
 
+To trigger the debounce on the leader edge:
+
 ```js
 import debounceRender from 'react-debounce-render';
 
 const debouncedMyReactComponent = debounceRender(MyReactComponent, 100, { leading: false });
 ```
 
+Or to ensure that at least one refresh happens every second:
+
+```js
+import debounceRender from 'react-debounce-render';
+
+const debouncedMyReactComponent = debounceRender(MyReactComponent, 100, { maxWait: 1000 });
+```
+
 # Changelog
+
+### 6.0.0 - FEB 04 2020
+
+* Add support for hoisting non-react statics. See [PR #16](https://github.com/podefr/react-debounce-render/pull/16) for more details. Thanks [Thomas0c](https://github.com/Thomas0c) for the contribution! 
+* Update e2e tests to use the most recent React version
+* Drop supports for React <= 15
 
 ### 5.0.0 - OCT 04 2018
 
