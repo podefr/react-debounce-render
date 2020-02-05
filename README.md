@@ -1,3 +1,4 @@
+![npm](https://img.shields.io/npm/dw/react-debounce-render) 
 ![Actively Maintained](https://img.shields.io/badge/Maintenance%20Level-Actively%20Maintained-green.svg)
 
 # react-debounce-render
