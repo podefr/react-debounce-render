@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import debounce from 'lodash/debounce';
+import debounce from 'lodash.debounce';
 import hoistNonReactStatics from 'hoist-non-react-statics';
 
 function debounceRender(ComponentToDebounce, ...debounceArgs) {
