@@ -56,6 +56,10 @@ const debouncedMyReactComponent = debounceRender(MyReactComponent, 100, { maxWai
 
 # Changelog
 
+### 6.1.0 - JUNE 23 2020
+
+* Fix import of lodash.debounce. See [PR #20](https://github.com/podefr/react-debounce-render/pull/20). Thanks [ReinAkane](https://github.com/ReinAkane) for the contribution!
+
 ### 6.0.0 - FEB 04 2020
 
 * Add support for hoisting non-react statics. See [PR #16](https://github.com/podefr/react-debounce-render/pull/16) for more details. Thanks [Thomas0c](https://github.com/Thomas0c) for the contribution! 
