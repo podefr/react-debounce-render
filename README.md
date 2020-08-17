@@ -54,6 +54,25 @@ import debounceRender from 'react-debounce-render';
 const debouncedMyReactComponent = debounceRender(MyReactComponent, 100, { maxWait: 1000 });
 ```
 
+### Compose with other HOCs:
+
+Use `debounce` instead of `debounceRender` to compose with other HOCs and some compose utility function.
+[maximizing composability convention](https://reactjs.org/docs/higher-order-components.html#convention-maximizing-composability)
+
+```js
+import { debounce } from 'react-debounce-render';
+import { withStyles } from '@material-ui/core/styles';
+import { compose } from 'ramda';
+
+// ...
+
+export default compose(
+  withStyles(styles),
+  debounce(200, {maxWait: 400})
+)(MyReactComponent);
+
+```
+
 # Changelog
 
 ### 6.1.0 - JUNE 23 2020
