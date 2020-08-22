@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
-import debounceRender from 'react-debounce-render';
+import debounceRender, { debounce } from 'react-debounce-render';
+import { compose } from 'ramda';
 
 import  DisplayCount from './DisplayCount';
 
 import './App.css';
-
+debugger;
 const DebouncedDisplayCount = debounceRender(DisplayCount, 100);
+const ComposedDebouncedDisplayCount = compose(
+    debounce(100)
+    )(DisplayCount)
 
 class App extends Component {
     constructor(props) {
@@ -40,7 +44,8 @@ class App extends Component {
             <p>
                 App.render() was called : <b className="app-render-count">{ this.renderCount }</b> times.
             </p>
-            <DebouncedDisplayCount data={ this.state.data }/>
+            <DebouncedDisplayCount className="hoc" data={ this.state.data }/>
+            <ComposedDebouncedDisplayCount className="composable" data={ this.state.data } />
         </div>;
     }
 }

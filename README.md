@@ -75,6 +75,11 @@ export default compose(
 
 # Changelog
 
+### 7.0.0 - AUG 22 2020
+
+* Introduce the `debounce` higher order function as 2nd export for use in redux/compose patterns. See [maximizing composability convention](https://reactjs.org/docs/higher-order-components.html#convention-maximizing-composability) for more info. Thanks [CurriedFloat](https://github.com/CurriedFloat) for the contribution!
+* No breaking changes
+
 ### 6.1.0 - JUNE 23 2020
 
 * Fix import of lodash.debounce. See [PR #20](https://github.com/podefr/react-debounce-render/pull/20). Thanks [ReinAkane](https://github.com/ReinAkane) for the contribution!
