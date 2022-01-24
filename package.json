@@ -1,48 +1,22 @@
 {
   "name": "react-debounce-render",
-  "version": "7.0.1",
-  "homepage": "https://github.com/podefr/react-debounce-render",
+  "version": "1.0.0",
+  "private": true,
+  "homepage": "https://github.com/podefr/react-debounce-render#readme",
   "description": "A React Higher Order component that wraps your React Components and debounces their rendering. Uses lodash.debounce under the hood.",
-  "main": "lib/index.js",
   "scripts": {
-    "prepublishOnly": "rm -rf lib && babel src -d lib --copy-files",
-    "test": "cd e2e; CI=true npm test; cd .."
-  },
-  "keywords": [
-    "react",
-    "render",
-    "debounce",
-    "lodash",
-    "performance"
-  ],
-  "author": "Olivier Scherrer <pode.fr@gmail.com>",
-  "contributors": [
-    {
-      "name": "CurriedFloat",
-      "url": "https://github.com/CurriedFloat"
-    },
-    {
-      "name": "Thomas Carlson",
-      "url": "https://github.com/Thomas0c"
-    }
-  ],
-  "license": "MIT",
-  "dependencies": {
-    "hoist-non-react-statics": "^3.3.2",
-    "lodash.debounce": "^4.0.8"
-  },
-  "peerDependencies": {
-    "react": ">= 16"
-  },
-  "devDependencies": {
-    "@babel/cli": "^7.8.4",
-    "@babel/core": "^7.8.4",
-    "@babel/plugin-proposal-class-properties": "^7.8.3",
-    "@babel/preset-env": "^7.8.4",
-    "@babel/preset-react": "^7.8.3"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:podefr/react-debounce-render.git"
-  }
+    "url": "git+https://github.com/podefr/react-debounce-render.git"
+  },
+  "author": "Olivier Scherrer <pode.fr@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/podefr/react-debounce-render/issues"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
 }

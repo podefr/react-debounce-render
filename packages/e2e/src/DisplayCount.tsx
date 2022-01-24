@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 
-export default class DisplayCount extends Component {
-    constructor(props) {
+export default class DisplayCount extends Component<{ data: any[] } & { className: string }> {
+    renderCount: number;
+
+    constructor(props: { data: any[]} & { className: string }) {
         super(props);
 
         this.renderCount = 0;
