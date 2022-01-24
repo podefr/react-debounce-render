@@ -43,7 +43,7 @@ To trigger the debounce on the leader edge:
 import debounceRender from "react-debounce-render";
 
 const debouncedMyReactComponent = debounceRender(MyReactComponent, 100, {
-  leading: false,
+  leading: true,
 });
 ```
 
@@ -76,6 +76,11 @@ export default compose(
 ```
 
 # Changelog
+
+### 8.0.0 - JAN 29 2022
+
+- Rewrite using TypeScript
+- Fixes #28, #24, #18, #14
 
 ### 7.0.1 - JAN 23 2022
 
