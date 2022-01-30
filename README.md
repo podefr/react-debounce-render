@@ -1,7 +1,7 @@
 ![npm](https://img.shields.io/npm/dw/react-debounce-render)
 ![Actively Maintained](https://img.shields.io/badge/Maintenance%20Level-Actively%20Maintained-green.svg)
 
-# react-debounce-render
+# react-debounce-render (now with TypeScript support)
 
 `react-debounce-render` is a Higher Order Component that wraps your react components and debounces their rendering.
 
