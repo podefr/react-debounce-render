@@ -6,7 +6,7 @@ import hoistNonReactStatics from 'hoist-non-react-statics';
 
 function debounceRender<T>(ComponentToDebounce: ComponentType<T>, wait?: number, debounceArgs?: DebounceSettings): ComponentType<T> {
     class DebouncedContainer extends Component<T> {
-        displayName = `debounceRender(${ ComponentToDebounce.displayName || ComponentToDebounce.name || 'Component' })`;
+        public static readonly displayName = `debounceRender(${ ComponentToDebounce.displayName || ComponentToDebounce.name || 'Component' })`;
         updateDebounced = _debounce(this.forceUpdate, wait, debounceArgs);
 
         shouldComponentUpdate() {
