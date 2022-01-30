@@ -1,7 +1,7 @@
 ![npm](https://img.shields.io/npm/dw/react-debounce-render)
 ![Actively Maintained](https://img.shields.io/badge/Maintenance%20Level-Actively%20Maintained-green.svg)
 
-# react-debounce-render (now with TypeScript support)
+# React Debounce Render (now with TypeScript support)
 
 `react-debounce-render` is a Higher Order Component that wraps your react components and debounces their rendering.
 
@@ -19,6 +19,10 @@ and only rendering the wrapped component when no new updates has been received i
 is lodash's debounce, you may also pass in a few options such as the number of milliseconds to delay the render by, a maximum delay, or whether to call render on a leading or trailing edge of the timeout.
 
 ## Usage:
+
+```
+npm install react-debounce-render
+```
 
 ### Default usage:
 
