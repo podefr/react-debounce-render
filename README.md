@@ -77,7 +77,7 @@ export default compose(
 
 # Changelog
 
-### 8.0.0 - JAN 29 2022
+### 8.0.0 - 8.0.1 - JAN 29 2022
 
 - Rewrite using TypeScript
 - Fixes #28, #24, #18, #14
