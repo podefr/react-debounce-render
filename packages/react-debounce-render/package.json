@@ -1,10 +1,13 @@
 {
   "name": "react-debounce-render",
-  "version": "8.0.1",
+  "version": "8.0.2",
   "homepage": "https://github.com/podefr/react-debounce-render",
   "description": "A React Higher Order component that wraps your React Components and debounces their rendering. Uses lodash.debounce under the hood.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist/*"
+  ],
   "keywords": [
     "react",
     "render",

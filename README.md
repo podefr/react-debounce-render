@@ -81,6 +81,10 @@ export default compose(
 
 # Changelog
 
+### 8.0.2 - FEB 21 2022
+
+- Fixes #35: Add missing \*.d.ts file. Thanks [Robert Orliński](https://github.com/robert-orlinski) for raising the issue.
+
 ### 8.0.0 - 8.0.1 - JAN 29 2022
 
 - Rewrite using TypeScript
