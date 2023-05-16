@@ -10,10 +10,9 @@ function debounceRender<T>(ComponentToDebounce: ComponentType<T>, wait?: number,
         updateDebounced = _debounce(this.forceUpdate, wait, debounceArgs);
 
         shouldComponentUpdate() {
+            this.updateDebounced();
             if (typeof forceUpdateCondition === 'function' && forceUpdateCondition(this.props, nextProps, this.state, nextState)) {
                 this.updateDebounced.flush();
-            } else {
-                this.updateDebounced();
             }
             return false;
         }
