@@ -4,13 +4,17 @@ import { DebounceSettings } from 'lodash';
 
 import hoistNonReactStatics from 'hoist-non-react-statics';
 
-function debounceRender<T>(ComponentToDebounce: ComponentType<T>, wait?: number, debounceArgs?: DebounceSettings): ComponentType<T> {
+function debounceRender<T>(ComponentToDebounce: ComponentType<T>, wait?: number, debounceArgs?: DebounceSettings, forceUpdateCondition?: (nextProps: T, nextState: S) => boolean): ComponentType<T> {
     class DebouncedContainer extends Component<T> {
         public static readonly displayName = `debounceRender(${ ComponentToDebounce.displayName || ComponentToDebounce.name || 'Component' })`;
         updateDebounced = _debounce(this.forceUpdate, wait, debounceArgs);
 
         shouldComponentUpdate() {
-            this.updateDebounced();
+            if (typeof forceUpdateCondition === 'function' && forceUpdateCondition(nextProps, nextState)) {
+                this.updateDebounced.flush();
+            } else {
+                this.updateDebounced();
+            }
             return false;
         }
 
